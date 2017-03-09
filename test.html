@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>demo1</title>
+
+</head>
+
+<body>
+    <!-- 图片预览 -->
+    <input type="file" name="file" value="" onchange="showPrevice(this)">
+    <img src="" alt="" width="auto" height="auto" id="imgOne" />
+    <script type="text/javascript">
+        var $ = function(obj) {
+            return document.getElementById(obj);
+        };
+        function showPrevice(source) {
+            var file = source.files[0];
+            if (window.FileReader) {
+                var fr = new FileReader();
+                fr.onloadend = function(e) {
+                    $("imgOne").src = e.target.result;
+                }
+            };
+            fr.readAsDataURL(file);
+        };
+        <!-- 扁平化数组方法 -->
+        var arr = [1,2,[3,5,6,[3,5,7]],34,45,[3,6,8,90]];
+        // var brr = arr.toString().split(',');
+        var result = [];
+        function unflod(arr){
+          var result = arr.map(function(item,index,arr){
+            // if(typeof item != "object"){
+            //   return item;
+            // };
+            return (typeof item == "object");
+          });
+          // console.log(result);
+        };
+        // unflod(arr);
+      // 数组归并方法
+      function arrReduce(){
+        arr = arr.filter(function(item,index,array){
+          return (typeof item != "object");
+        });
+        var sum = arr.reduce(function(prev,cur,index,array){
+          return prev + cur;
+        });
+        console.log(sum);
+      };
+      // arrReduce();
+      // var now = new Date(Date.parse("January 3, 2017"));
+      var now = new Date("January 3, 2017");
+        // console.log(allFives);
+        // var start = Date.now();
+        // var start = +new Date;
+        // console.log(start.valueOf());
+        // var stop = Date.now();
+        // var stop = +new Date;
+        // console.log(stop.valueOf());
+        // console.log(stop - start);
+        // console.log(allFives.toString());
+        // console.log(allFives.toLocaleString());
+        // console.log(allFives.getMilliseconds());
+        // console.log(allFives.getSeconds());
+        // console.log(now);
+      // var allFives = new Date(Date.UTC(2000,2,3,18,35,45));
+      var allFives = new Date(2000,2,3,18,35,45);
+      var pattern = /[co]e/g;
+      var pattern2 = /log/g;
+      var pattern1 = new RegExp("[co]n","g");
+      console.log(pattern2);
+      // for (var propName in window) {
+      //   console.log(this);
+      //   console.log(propName);
+      // };
+      var resultOk = "Brouse".toLowerCase() < "allows".toLowerCase();
+      // console.log(resultOk);
+      var Global = function(){
+        return this;
+      }();
+      console.log(Global);
+    </script>
+
+
+</body>
+
+</html>
