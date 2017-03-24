@@ -3,4 +3,8 @@ JavaScript-theory-demo
 这个库用来编写javascript基础理论代码实例，以便更加深刻地理解javascript
 -----------------------------------------------------------------------
 
+<<<<<<< HEAD
  this
+=======
+ second test
+>>>>>>> d1b9ee62419366ae6f35e4f8a78c1e610716fc7c
