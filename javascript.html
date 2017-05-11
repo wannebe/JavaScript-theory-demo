@@ -15,7 +15,7 @@
       };
       // Array迭代函数之map
       var result = arrayTest.map(funTest);
-      // console.log(funTest);
+      // console.log(funTest);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               0
       // console.log(result);
       var test1 =  ["1", "2", "3"].map(parseInt);
       // test1相当于以下三段代码  parseInt接收两个参数（string,radix）
@@ -76,7 +76,9 @@
 
       var color = ["red","blue","yellow","black","white","purl"];
       var selectForm = function(one,two){
-        if(typeof one === 'number'){}else{
+        if(typeof one === 'number'){
+
+        }else{
           parseInt(one);
         }
         var choices = two - one ;
@@ -101,18 +103,25 @@
       // console.log(Function.prototype.toString.call(color));
       // console.log(Object.prototype.toString.call(color));
       // console.log(Object.prototype.toString.call(color) === '[object Array]');
+      // JS中用typeof验证数据类型——'number','object','string','boolean','undifined'.
+      // 如果要验证对象、数组、函数需要使用Object.prototype.toString.call();
+      // javascript中所有对象包括原生对象以及宿主对象都具有[[class]]属性，这是一个内部属性，[[class]] 一个字符串值，表明对象类型
+      // Object.prototype.toString方法：首先获取对象类名[[class]]属性值，然后将字符串[object、类名、]拼接起来，作为返回值，示例如下
       // 验证参数是不是数组
       var testingObj = function(obj){
         return Object.prototype.toString.call(obj) === '[object Array]';
       };
+
       // 事件流：事件捕获阶段、处于目标阶段、事件冒泡阶段
       // 开发中遇到得一个实际问题在函数中传参数时，如果要传一个参数，但是这个参数又是单个固定参数传的【不能使用一个变量】，那么不能直接使用单引号或者双引号传输，应该转义
       // 单引号使用&apos;、双引号使用&quot;,原因是在事件处理程序中【on】,事件特性的值是javascript，不能使用未经转义的HTML语法字符，但是下面这个例子我还不是太明白为什么？
       // <a href="javascript:void(0);" class="tab_cell" onclick="mapClickList.companyDetailsList(' + companyId + ',&quot;'+ sName + '&quot;)"' +
       // '>View Details</a>
+
       // substring(start,stop) 不包含stop处的字符，不接受负数，如果stop小于start，会交换参数
       // stringObject.substr(start,length) 以指定长度获取字符串
       // slice(stop,end) 接受负数
+
   </script>
 </body>
 </html>
